@@ -3,7 +3,7 @@ import React from 'react'
 import { useDrag, DragPreviewImage } from 'react-dnd'
 
 export default function Piece({ piece
-    : { type, color }
+    : { type, color }, position
 }) {
 
 
@@ -22,7 +22,7 @@ export default function Piece({ piece
         }),
 
         type: 'piece',
-        item: () => ({ id: `${type}_${color}`, })
+        item: () => ({ id: `${position}_${type}_${color}`, })
 
 
 

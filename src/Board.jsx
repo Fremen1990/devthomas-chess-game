@@ -28,7 +28,7 @@ export default function Board({ board }) {
 
                 <div key={i} className="square">
                     {/* <p>{JSON.stringify(piece)}</p> */}
-                    <BoardSquare piece={piece} black={isBlack(i)} />
+                    <BoardSquare piece={piece} black={isBlack(i)} position={getPosition(i)} />
                 </div>
 
             )}
