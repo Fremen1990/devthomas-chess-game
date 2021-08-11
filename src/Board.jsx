@@ -16,6 +16,12 @@ export default function Board({ board }) {
     }
 
 
+    function getPosition(i) {
+        const { x, y } = getXYPosition(i)
+        const letter = ["a", "b", "c", "d", "e", "f", "g", "h"][x]
+        return `${letter}${y + 1}`
+    }
+
     return (
         <div className="board">
             {board.flat().map((piece, i) =>
